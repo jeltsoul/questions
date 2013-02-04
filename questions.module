@@ -1,0 +1,134 @@
+<?php
+
+function questions_block_info() {
+  // This example comes from node.module.
+
+
+  $blocks['questions'] = array(
+    'info' => t('questions'),
+    // DRUPAL_CACHE_PER_ROLE will be assumed.
+  );
+
+  return $blocks;
+}
+
+function questions_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+    case 'questions':
+      $block['subject'] = t('<em>Answer this shit!!</em>');
+      $block['content'] = drupal_get_form('form_2');
+
+
+      break;
+
+
+  }
+  return $block;
+}
+
+function form_2($form, $form_state){
+
+$form = array();
+$question_number = array();
+$question_number = get_question();
+//dpm($question_number);
+
+if ($question_number != null) {
+  foreach ($question_number as $key => $value) {
+       $form['question'.$key] = array(
+
+        '#type' => 'textfield',
+        '#title' => t($value),
+        '#size' => 30,
+        '#maxlength' => 35,
+
+      );
+
+  }
+
+ }
+
+ $form['submit'] = array(
+   '#type' => 'submit',
+   '#value' => t('send')
+ );
+
+ return $form;
+}
+
+function get_question(){
+
+  $questions = array();
+
+  $questions[] = "Who's gnr's singer";
+  $questions[] = "who's gnr's lead guitar player";
+  $questions[] = "Who's gnr's rhythm guitar player";
+  $questions[] = "who's gnr's bass player";
+  $questions[] = "Who's gnr's drummer player";
+
+  return $questions;
+
+}
+
+
+/*$form['title'] = array(
+
+  '#type' => 'textfield',
+  '#title' => t("Who's gnr's singer"),
+  '#size' => 30,
+  '#maxlength' => 35,
+
+  );
+$form['title1'] = array(
+
+  '#type' => 'textfield',
+  '#title' => t("Who's gnr's guitar player"),
+  '#size' => 30,
+  '#maxlength' => 35,
+
+  );
+$form['titl2'] = array(
+
+  '#type' => 'textfield',
+  '#title' => t("Who's gnr's bass player"),
+  '#size' => 30,
+  '#maxlength' => 35,
+
+  );
+$form['title3'] = array(
+
+  '#type' => 'textfield',
+  '#title' => t("Who's gnr's drummer"),
+  '#size' => 30,
+  '#maxlength' => 35,
+
+  );
+$form['title4'] = array(
+
+  '#type' => 'textfield',
+  '#title' => t("Who's gnr's rhythm "),
+  '#size' => 30,
+  '#maxlength' => 35,
+
+  );
+
+ $form['submit'] = array(
+   '#type' => 'submit',
+   '#value' => t('send')
+ );
+
+  return $form;
+}
+
+function form_1_submit($form,$form_state){
+ $id = db_insert('block2_example')
+     ->fields(array(
+         'mytextfield' => $form_state['values']['title'],
+
+         ))
+->execute();
+}*/
+

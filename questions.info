@@ -1,0 +1,5 @@
+name = Questions
+description = "Question form"
+package = Question test
+core = 7.x
+files [] = questions.module
