@@ -69,6 +69,7 @@ function get_question(){
   $questions[] = "who's gnr's bass player";
   $questions[] = "Who's gnr's drummer player";
   $questions[] = "Who's gnr's  new drummer player";
+  $questions[] = "Last album of GNR";
 
   return $questions;
 
