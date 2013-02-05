@@ -63,11 +63,11 @@ function get_question(){
 
   $questions = array();
 
-  $questions[] = "1-Who's gnr's singer";
-  $questions[] = "2-who's gnr's lead guitar player";
-  $questions[] = "3-Who's gnr's drummer player";
+  $questions[] = "1-Who's Axl Rose";
+  $questions[] = "2-who's Soul Hudson";
+  $questions[] = "3-Who's Matt Sorum";
   $questions[] = "4-Who's gnr's  new drummer player";
-  $questions[] = "5-Messing with github";
+  $questions[] = "5-github shit";
 
 
   return $questions;
