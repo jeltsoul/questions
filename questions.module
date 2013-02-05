@@ -72,6 +72,7 @@ function get_question(){
   $questions[] = "Last album of GNR";
   $questions[] = "First album of GNR";
   $questions[] = "Second album of GNR";
+  $questions[] = "Third album of GNR";
 
   return $questions;
 
