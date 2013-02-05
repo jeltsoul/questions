@@ -53,7 +53,7 @@ if ($question_number != null) {
 
  $form['submit'] = array(
    '#type' => 'submit',
-   '#value' => t('send shit')
+   '#value' => t('send new shit')
  );
 
  return $form;
@@ -65,7 +65,6 @@ function get_question(){
 
   $questions[] = "Who's gnr's singer";
   $questions[] = "who's gnr's lead guitar player";
-  $questions[] = "Who's gnr's rhythm guitar player";
   $questions[] = "Who's gnr's drummer player";
   $questions[] = "Who's gnr's  new drummer player";
   $questions[] = "Messing with github";
