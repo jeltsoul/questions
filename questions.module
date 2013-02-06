@@ -18,7 +18,7 @@ function questions_block_view($delta = '') {
 
   switch ($delta) {
     case 'questions':
-      $block['subject'] = t('<em> Shit practice!!</em>');
+      $block['subject'] = t('<em> Shit !!</em>');
       $block['content'] = drupal_get_form('form_2');
 
 
