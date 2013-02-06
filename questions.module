@@ -67,7 +67,7 @@ function get_question(){
   $questions[] = "2-what's the real name of Slash?;
   $questions[] = "3-Who's Matt Sorum?";
   $questions[] = "4-Who's gnr's new drummer player?";
-  $questions[] = "5-github shit?";
+  $questions[] = "Why is Letty alive?";
   $questions[] = "What's the last album of GNR?";
 
 
