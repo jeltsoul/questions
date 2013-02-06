@@ -66,8 +66,9 @@ function get_question(){
   $questions[] = "1-Who's Axl Rose";
   $questions[] = "2-who's Soul Hudson";
   $questions[] = "3-Who's Matt Sorum";
-  $questions[] = "4-Who's gnr's  new drummer player";
+  $questions[] = "4-Who's gnr's new drummer player";
   $questions[] = "5-github shit";
+  $questions[] = "What's the last album of GNR";
 
 
   return $questions;
