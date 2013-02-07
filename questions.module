@@ -63,16 +63,32 @@ function get_question(){
 
   $questions = array();
 
-  $questions[] = "1-Who's Axl Rose?";
-  $questions[] = "2-what's the real name of Slash?";
-  $questions[] = "3-Who's Matt Sorum?";
-  $questions[] = "4-Who's gnr's new drummer player?";
-  $questions[] = "Why is Letty alive?";
-  $questions[] = "What's the last album of GNR?";
-
+  $questions[] = "1-Name";
+  $questions[] = "2-Last Name";
+  $questions[] = "3-Username";
 
   return $questions;
 
+}
+function form_2_validate($form, $form_state) {
+   dpm($form_state);
+
+//foreach ($form_state as $key => $value) {
+  if($form_state['values']['question2'] == null ){
+    form_set_error('question2', t('Not completed'));
+  }
+  if(validate_ws())
+    drupal_set_message(t(' complete.'), 'error');
+  //drupal_set_messege($message = "It's validated.",$type ='status',$repeat = true);
+  else
+//  drupal_set_messege($message = "It's not validated.",$type ='error',$repeat = false);
+   drupal_set_message(t('An error occurred and processing did not complete.'), 'error');
+ //}
+}
+
+
+function validate_ws(){
+    return false;
 }
 
 
