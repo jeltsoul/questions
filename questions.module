@@ -66,6 +66,7 @@ function get_question(){
   $questions[] = "1-Name";
   $questions[] = "2-Last Name";
   $questions[] = "3-Username";
+  $questions[] = "4-e-mail";
 
   return $questions;
 
