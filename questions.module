@@ -80,7 +80,7 @@ function form_2_validate($form, $form_state) {
 
     if ($pos) {
       if($value == null ){
-        form_set_error($key, t($key. 'is not completed'));
+        form_set_error($key, t($key. "its' not completed"));
       }
     }
   }
