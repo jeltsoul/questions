@@ -18,7 +18,7 @@ function questions_block_view($delta = '') {
 
   switch ($delta) {
     case 'questions':
-      $block['subject'] = t('<em> Shit !!</em>');
+      $block['subject'] = t('<em> Shit Questions !!</em>');
       $block['content'] = drupal_get_form('form_2');
 
 
@@ -66,7 +66,6 @@ function get_question(){
   $questions[] = "1-Name";
   $questions[] = "2-Last Name";
   $questions[] = "3-Username";
-  $questions[] = "4-e-mail";
 
   return $questions;
 
@@ -74,12 +73,32 @@ function get_question(){
 function form_2_validate($form, $form_state) {
    dpm($form_state);
 
-//foreach ($form_state as $key => $value) {
-  if($form_state['values']['question2'] == null ){
-    form_set_error('question2', t('Not completed'));
-  }
+/*foreach ($form_state['values'] as $value) {
+  $mystring = $value;
+  $find = 'question';
+  $pos = strpos($value, $find);
+
+   if($pos == 0){
+     if($form_state['values']['question0'] == null ){
+        form_set_error('question0', t('Question 1 is not completed'));
+   }
+
+
+}*/
+  /*   if($form_state['values']['question0'] == null ){
+        form_set_error('question0', t('Question 1 is not completed'));
+      }
+      elseif ($form_state['values']['question1'] == null ) {
+
+        form_set_error('question1', t('Question 2 is not completed'));
+      }
+      elseif ($form_state['values']['question2'] == null) {
+
+        form_set_error('question2', t('Question 3 is not completed'));
+         }*/
+
   if(validate_ws())
-    drupal_set_message(t(' complete.'), 'error');
+    drupal_set_message(t('complete.'), 'error');
   //drupal_set_messege($message = "It's validated.",$type ='status',$repeat = true);
   else
 //  drupal_set_messege($message = "It's not validated.",$type ='error',$repeat = false);
