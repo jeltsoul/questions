@@ -29,7 +29,8 @@ function questions_block_view($delta = '') {
   return $block;
 }
 
-function form_2($form, $form_state){
+function form_2($form, &$form_state){
+dpm($form);
 
 $form = array();
 $question_number = array();
@@ -71,34 +72,24 @@ function get_question(){
 
 }
 function form_2_validate($form, $form_state) {
-   dpm($form_state);
+  dpm($form);
+  foreach ($form_state['values'] as $key => $value) {
+    $mystring = $key;
+    $find = 'question';
+    $pos = strstr($mystring, $find);
 
-/*foreach ($form_state['values'] as $value) {
-  $mystring = $value;
-  $find = 'question';
-  $pos = strpos($value, $find);
-
-   if($pos == 0){
-     if($form_state['values']['question0'] == null ){
-        form_set_error('question0', t('Question 1 is not completed'));
-   }
-
-
-}*/
-  /*   if($form_state['values']['question0'] == null ){
-        form_set_error('question0', t('Question 1 is not completed'));
+    if ($pos) {
+      if($value == null ){
+        form_set_error($key, t($key. 'is not completed'));
       }
-      elseif ($form_state['values']['question1'] == null ) {
+    }
+  }
+}
 
-        form_set_error('question1', t('Question 2 is not completed'));
-      }
-      elseif ($form_state['values']['question2'] == null) {
 
-        form_set_error('question2', t('Question 3 is not completed'));
-         }*/
-
-  if(validate_ws())
-    drupal_set_message(t('complete.'), 'error');
+function form_2_submit($form, $form_state){
+    if(validate_ws())
+    drupal_set_message(t('complete.'), 'status');
   //drupal_set_messege($message = "It's validated.",$type ='status',$repeat = true);
   else
 //  drupal_set_messege($message = "It's not validated.",$type ='error',$repeat = false);
@@ -106,9 +97,8 @@ function form_2_validate($form, $form_state) {
  //}
 }
 
-
 function validate_ws(){
-    return false;
+    return true;
 }
 
 
