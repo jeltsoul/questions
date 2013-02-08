@@ -53,7 +53,7 @@ if ($question_number != null) {
 
  $form['submit'] = array(
    '#type' => 'submit',
-   '#value' => t('dick!')
+   '#value' => t('dingleberry!')
  );
 
  return $form;
