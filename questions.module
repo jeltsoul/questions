@@ -75,12 +75,12 @@ function form_2_validate($form, $form_state) {
   dpm($form);
   foreach ($form_state['values'] as $key => $value) {
     $mystring = $key;
-    $find = 'question';
+    $find = t('question');
     $pos = strstr($mystring, $find);
 
     if ($pos) {
       if($value == null ){
-        form_set_error($key, t($key. "its' not completed"));
+        form_set_error($key, t($key. " is not completed"));
       }
     }
   }
