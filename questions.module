@@ -66,13 +66,13 @@ function get_question(){
 
   $questions[] = "1-Name";
   $questions[] = "2-Last Name";
-  $questions[] = "3-Username";
+  $questions[] = "3-Username2";
 
   return $questions;
 
 }
 function form_2_validate($form, $form_state) {
-  dpm($form);
+  dpm($form_state);
   foreach ($form_state['values'] as $key => $value) {
     $mystring = $key;
     $find = t('question');
