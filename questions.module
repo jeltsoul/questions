@@ -101,6 +101,11 @@ function validate_ws(){
     return true;
 }
 
+function testing(){
+  $bitch = 'whore';
+dpm($bitch);
+}
+
 
 /*$form['title'] = array(
 
