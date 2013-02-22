@@ -36,6 +36,8 @@ $form = array();
 $question_number = array();
 $question_number = get_question();
 //dpm($question_number);
+$test = testing();
+dpm($test);
 
 if ($question_number != null) {
   foreach ($question_number as $key => $value) {
@@ -103,7 +105,8 @@ function validate_ws(){
 
 function testing(){
   $bitch = 'whore';
-dpm($bitch);
+//dpm($bitch);
+  return $bitch;
 }
 
 
