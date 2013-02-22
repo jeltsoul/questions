@@ -30,7 +30,7 @@ function questions_block_view($delta = '') {
 }
 
 function form_2($form, &$form_state){
-dpm($form);
+//dpm($form);
 
 $form = array();
 $question_number = array();
@@ -54,7 +54,7 @@ if ($question_number != null) {
 
  $form['submit'] = array(
    '#type' => 'submit',
-   '#value' => t('Bitch!')
+   '#value' => t('Whore!')
  );
 
  return $form;
@@ -72,7 +72,7 @@ function get_question(){
 
 }
 function form_2_validate($form, $form_state) {
-  dpm($form_state);
+  //dpm($form_state);
   foreach ($form_state['values'] as $key => $value) {
     $mystring = $key;
     $find = t('question');
