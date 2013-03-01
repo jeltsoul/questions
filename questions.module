@@ -70,6 +70,7 @@ function get_question(){
   $questions[] = "2-Last Name";
   $questions[] = "3-Password";
   $questions[] = "4-job";
+  $questions[] = "5-Marital Status";
 
   return $questions;
 
