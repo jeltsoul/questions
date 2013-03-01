@@ -18,7 +18,7 @@ function questions_block_view($delta = '') {
 
   switch ($delta) {
     case 'questions':
-      $block['subject'] = t('<em> New shit!!!</em>');
+      $block['subject'] = t('<em> New month!!!</em>');
       $block['content'] = drupal_get_form('form_2');
 
 
@@ -56,7 +56,7 @@ if ($question_number != null) {
 
  $form['submit'] = array(
    '#type' => 'submit',
-   '#value' => t('Whore!')
+   '#value' => t('dingleberry!')
  );
 
  return $form;
@@ -69,6 +69,7 @@ function get_question(){
   $questions[] = "1-Name";
   $questions[] = "2-Last Name";
   $questions[] = "3-Password";
+  $questions[] = "4-job";
 
   return $questions;
 
